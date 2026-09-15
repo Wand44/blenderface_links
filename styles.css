@@ -31,7 +31,7 @@ body {
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.05) 2px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.05) 2px, transparent 1px);
-    background-size: 76px 76px;
+    background-size: 45px 45px;
     image-rendering: pixelated;
     animation: bg-slide 3s linear infinite;
 }
@@ -225,45 +225,29 @@ h1 {
 }
 
 @media (max-width: 650px) {
+    html, body {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .page-shell {
+        width: 100%;
+        min-height: 100vh;
         padding: 0 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .page-card {
-        padding: 10px;
-    }
-
-    .hero {
-        padding: 2px 0 14px;
-    }
-
-    .eyebrow {
-        font-size: 9px;
-    }
-
-    h1 {
-        font-size: clamp(22px, 7vw, 32px);
-    }
-
-    .link-group {
-        padding: 8px;
-    }
-
-    .link-grid a,
-    .link-item {
-        min-height: 36px;
-        padding: 4px 7px;
-        font-size: 10px;
-    }
-
-    .link-grid small {
-        font-size: 9px;
-    }
-}
-
-@media (max-width: 650px) and (max-height: 750px) {
-    .page-card {
-        padding: 6px;
+        width: min(100%, 420px);
+        padding: 8px 8px 6px;
     }
 
     .hero {
@@ -280,7 +264,7 @@ h1 {
     }
 
     .section-grid {
-        gap: 5px;
+        gap: 4px;
     }
 
     .link-group {
@@ -289,14 +273,89 @@ h1 {
 
     .section-heading {
         gap: 7px;
-        margin-bottom: 5px;
+        margin-bottom: 4px;
     }
 
     .section-number {
-        width: 20px;
-        height: 20px;
-        font-size: 8px;
+        width: 18px;
+        height: 18px;
+        font-size: 7px;
     }
+
+    .link-group h2 {
+        font-size: 10px;
+    }
+
+    .link-grid,
+    .link-flex {
+        gap: 2px;
+    }
+
+    .link-grid a,
+    .link-flex a,
+    .link-item {
+        min-height: 26px;
+        padding: 3px 6px;
+        font-size: 8px;
+        line-height: 1.3;
+    }
+
+    .link-grid small,
+    .link-flex small {
+        font-size: 7px;
+        margin-top: 1px;
+    }
+}
+
+@media (max-width: 650px) and (max-height: 750px) {
+    .page-card {
+        padding: 6px;
+    }
+
+    .hero {
+        padding: 0 0 6px;
+    }
+
+    .eyebrow {
+        margin-bottom: 4px;
+        font-size: 7px;
+    }
+
+    h1 {
+        font-size: clamp(18px, 6.5vw, 26px);
+    }
+
+    .section-grid {
+        gap: 3px;
+    }
+
+    .link-group {
+        padding: 5px;
+    }
+
+    .section-heading {
+        gap: 6px;
+        margin-bottom: 3px;
+    }
+
+    .section-number {
+        width: 16px;
+        height: 16px;
+        font-size: 6px;
+    }
+
+    .link-grid a,
+    .link-flex a,
+    .link-item {
+        min-height: 24px;
+        font-size: 7px;
+    }
+
+    .link-grid small,
+    .link-flex small {
+        font-size: 6px;
+    }
+}
 
     .link-group h2 {
         font-size: 10px;
