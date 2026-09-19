@@ -106,7 +106,7 @@ h1 {
 
 .link-group h2 {
     color: var(--blue);
-    font-size: 12px;
+    font-size: 18px;
     line-height: 1.4;
 }
 
@@ -136,9 +136,9 @@ h1 {
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    padding: 5px 8px;
+    padding: 10px 10px;
     color: var(--text);
-    font-size: 1em;
+font-size: 1em;
     line-height: 1.5;
     text-decoration: none;
     background: var(--surface);
@@ -182,7 +182,7 @@ h1 {
 .link-flex small {
     margin-top: 2px;
     color: var(--muted);
-    font-size: 8px;
+    font-size: 12px;
 }
 
 .link-grid a:hover small,
